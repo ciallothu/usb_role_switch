@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>USB Role Switch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="card hero">
+      <div>
+        <div class="eyebrow">KernelSU WebUI</div>
+        <h1>USB Role Switch</h1>
+        <p>Switch USB Type-C power and data roles independently on a rooted device.</p>
+        <p class="repo">GitHub: <span>ciallothu</span> · github.com/ciallothu/usb_role_switch</p>
+      </div>
+      <div id="pill" class="pill">loading</div>
+    </section>
+
+    <section class="card">
+      <h2>Power role</h2>
+      <div class="grid three">
+        <button id="btn-power-source" class="primary">Set source<br><span>power_role=source</span></button>
+        <button id="btn-power-sink">Set sink<br><span>power_role=sink</span></button>
+        <button id="btn-power-toggle">Toggle power<br><span>source ↔ sink</span></button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Data role</h2>
+      <div class="grid three">
+        <button id="btn-data-host" class="primary alt">Set host<br><span>data_role=host</span></button>
+        <button id="btn-data-device">Set device<br><span>data_role=device</span></button>
+        <button id="btn-data-toggle">Toggle data<br><span>host ↔ device</span></button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Presets</h2>
+      <div class="grid">
+        <button id="btn-source-host">Set source + host<br><span>common OTG output mode</span></button>
+        <button id="btn-sink-device">Set sink + device<br><span>common charging/device mode</span></button>
+        <button id="btn-pair-toggle">Toggle pair<br><span>source/host ↔ sink/device</span></button>
+        <button id="btn-refresh">Refresh status<br><span>status</span></button>
+      </div>
+      <p class="note">Some Type-C drivers reject role changes when no USB partner is detected. If a command fails with partner: not present, connect the target device or an OTG adapter first.</p>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>Current status</h2>
+        <button id="btn-copy-status" class="small">Copy</button>
+      </div>
+      <pre id="status">waiting...</pre>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>Last command output</h2>
+        <button id="btn-copy-output" class="small">Copy</button>
+      </div>
+      <pre id="output">waiting...</pre>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>Log</h2>
+        <div class="row-actions">
+          <button id="btn-log" class="small">Refresh</button>
+          <button id="btn-clear-log" class="small danger">Clear</button>
+        </div>
+      </div>
+      <pre id="log">waiting...</pre>
+    </section>
+
+    <section class="card muted">
+      <h2>Notes</h2>
+      <p>The module does not force any USB role at boot. All role changes are manual.</p>
+      <p>Read the active role by brackets: <code>[source] sink</code> means source is active, while <code>source [sink]</code> means sink is active.</p>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
