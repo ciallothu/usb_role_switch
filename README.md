@@ -7,10 +7,21 @@ Repository: <https://github.com/ciallothu/usb_role_switch>
 ---
 
 ## Overview
-<img width="1080" height="2400" alt="S60504-14565916_com sukisu ultra" src="https://github.com/user-attachments/assets/3c562d1a-3fc7-42b7-b554-716e8566b811" />
-<img width="1080" height="2400" alt="S60504-14564651_com sukisu ultra" src="https://github.com/user-attachments/assets/bb355e5d-b676-4ca8-a0c9-3d1f44b94d86" />
 
 USB Role Switch provides a simple WebUI for controlling USB Type-C role states through the Linux sysfs Type-C interface.
+
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/bb355e5d-b676-4ca8-a0c9-3d1f44b94d86" width="320" alt="USB Role Switch WebUI status screen" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/3c562d1a-3fc7-42b7-b554-716e8566b811" width="320" alt="USB Role Switch WebUI controls screen" />
+    </td>
+  </tr>
+</table>
 
 It allows a rooted device to switch:
 
