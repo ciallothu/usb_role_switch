@@ -1,0 +1,8 @@
+id=usb_role_switch
+name=USB Role Switch
+version=2.0.0
+versionCode=20
+author=GitHub: ciallothu
+webuiIcon=webroot/icon.svg
+support=https://github.com/ciallothu/usb_role_switch
+description=KernelSU WebUI module for switching USB Type-C power and data roles independently on rooted devices. Repository: github.com/ciallothu/usb_role_switch
